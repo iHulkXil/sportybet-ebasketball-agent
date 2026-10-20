@@ -11,7 +11,7 @@ Designed so the core logic can later be wrapped in a Telegram bot.
 - Anonymous booking code generation
 - Direct share link: `https://www.sportybet.com/ng/?shareCode=CODE`
 
-## Quick Start
+## Quick Start (local)
 
 ```bash
 pip install -r requirements.txt
@@ -19,6 +19,15 @@ streamlit run sportybet_web_app.py
 ```
 
 Open the URL Streamlit prints (usually http://localhost:8501).
+
+## Deployment
+
+Deployment files are included:
+
+- **Streamlit Community Cloud** (easiest): Connect this repo and deploy. No extra config needed.
+- **Render**: Uses `render.yaml`. Connect the repo and Render will detect it.
+- **Railway / Heroku**: Uses `Procfile`.
+- `.streamlit/config.toml` sets headless mode and disables usage stats for production.
 
 ## Important Warnings
 - Uses undocumented SportyBet internal endpoints. They can change or be blocked without notice.
